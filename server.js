@@ -4,7 +4,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var redis = require("redis");
-var r = redis.createClient("18013", "redis-18013.c13.us-east-1-3.ec2.cloud.redislabs.com");
+var r = redis.createClient("18013", "https://redis-18013.c13.us-east-1-3.ec2.cloud.redislabs.com");
 r.subscribe('confirma');
 r.subscribe('conteo');
 r.subscribe('nuevo');
